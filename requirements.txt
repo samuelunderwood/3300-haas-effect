@@ -3,3 +3,4 @@ numpy
 wave
 matplotlib
 mysql-python
+configparser
