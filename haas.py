@@ -203,7 +203,7 @@ if st.button("Create stimulus"):
     )
 
     # Plot a short window so the delay is visible
-    st.subheader("2) Waveform view (zoomed)")
+    st.subheader("2) Waveform view")
     # Show first 120 ms (or entire signal if shorter)
     show_ms = 120
     n_show = min(len(stereo), int(fs * show_ms / 1000))
@@ -213,7 +213,7 @@ if st.button("Create stimulus"):
     plt.plot(t, stereo[:n_show, 1], label="Right", linewidth=1.0)
     plt.xlabel("Time (ms)")
     plt.ylabel("Amplitude")
-    plt.title(f"Zoomed view (~{show_ms} ms). Delay ≈ {delay_ms:.1f} ms (lead: {lead}).")
+    plt.title(f"Delay ≈ {delay_ms:.1f} ms (lead: {lead}).")
     plt.legend(loc="upper right", framealpha=0.9)
     plt.tight_layout()
     st.pyplot(fig)
@@ -265,3 +265,4 @@ are perceived as an acoustical defect, whereas reverberance can produce various 
 
 """
 )
+
